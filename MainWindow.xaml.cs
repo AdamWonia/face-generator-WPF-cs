@@ -24,5 +24,10 @@ namespace FaceGenerator
         {
             InitializeComponent();
         }
+
+        private void colorBtn_Click(object sender, RoutedEventArgs e)
+        {
+            faceEllipse.Fill = new SolidColorBrush(Colors.Red);
+        }
     }
 }

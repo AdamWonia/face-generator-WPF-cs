@@ -28,10 +28,10 @@
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Face Generator" FontSize="32" FontWeight="Bold" Grid.ColumnSpan="4" 
                    HorizontalAlignment="Center" Padding="0, 10"/>
         <Canvas x:Name="faceCanvas" Grid.Column="1" Grid.Row="2" Width="200" Height="250">
-            <Ellipse Fill="Beige"  Height="190" Width="190" StrokeThickness="2" Stroke="Black"
+            <Ellipse x:Name="faceEllipse" Fill="Beige"  Height="190" Width="190" StrokeThickness="2" Stroke="Black"
                      Canvas.Left="5" Canvas.Top="5"/>
         </Canvas>
-        <Button x:Name="colorBtn" Grid.Column="1" Grid.Row="3" Content="Change Color" FontSize="20" />
+        <Button x:Name="colorBtn" Grid.Column="1" Grid.Row="3" Content="Change Color" FontSize="20" Click="colorBtn_Click" />
 
     </Grid>
 </Window>
