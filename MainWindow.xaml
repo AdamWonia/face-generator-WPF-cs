@@ -33,5 +33,15 @@
         </Canvas>
         <Button x:Name="colorBtn" Grid.Column="1" Grid.Row="3" Content="Change Color" FontSize="20" Click="colorBtn_Click" />
 
+        <ComboBox Name="cmbColors" Grid.Column="3" Grid.Row="2" Width="190" Height="20" Margin="80,20,80,200">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="{Binding Name}" Width="16" Height="16" Margin="0,2,5,2" />
+                        <TextBlock Text="{Binding Name}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
     </Grid>
 </Window>
