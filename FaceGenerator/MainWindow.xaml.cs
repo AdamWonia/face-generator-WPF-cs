@@ -32,6 +32,8 @@ namespace FaceGenerator
         {
             Color selectedColor = (Color)(cmbFaceColors.SelectedItem as PropertyInfo).GetValue(null, null);
             faceEllipse.Fill = new SolidColorBrush(selectedColor);
+            eyeEllipse1.Fill = new SolidColorBrush(selectedColor);
+            eyeEllipse2.Fill = new SolidColorBrush(selectedColor);
         }
     }
 }

@@ -55,8 +55,8 @@
             </ComboBox.ItemTemplate>
         </ComboBox>
 
-        <TextBlock Grid.Column="2" Grid.Row="2" Text="Eye color:" FontSize="20" FontWeight="Bold" Margin="5,80,0,20"/>
-        <ComboBox Name="cmbEyeColors" Grid.Column="3" Grid.Row="2" Width="190" Height="20" Margin="40,0,80,60">
+        <TextBlock Grid.Column="2" Grid.Row="2" Text="Eye color:" FontSize="20" FontWeight="Bold" Margin="5,60,0,20"/>
+        <ComboBox Name="cmbEyeColors" Grid.Column="3" Grid.Row="2" Width="190" Height="20" Margin="40,0,80,100">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
