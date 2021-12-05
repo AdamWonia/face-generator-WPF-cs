@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ja\\Desktop\\Programowanie\\C#\\projekt 2 - face generator\\FaceGenerator\\FaceGenerator.csproj": {}
+    "C:\\Users\\ja\\Desktop\\Programowanie\\C#\\projekt 2 - face generator\\FaceGenerator\\FaceGenerator\\FaceGenerator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ja\\Desktop\\Programowanie\\C#\\projekt 2 - face generator\\FaceGenerator\\FaceGenerator.csproj": {
+    "C:\\Users\\ja\\Desktop\\Programowanie\\C#\\projekt 2 - face generator\\FaceGenerator\\FaceGenerator\\FaceGenerator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ja\\Desktop\\Programowanie\\C#\\projekt 2 - face generator\\FaceGenerator\\FaceGenerator.csproj",
+        "projectUniqueName": "C:\\Users\\ja\\Desktop\\Programowanie\\C#\\projekt 2 - face generator\\FaceGenerator\\FaceGenerator\\FaceGenerator.csproj",
         "projectName": "FaceGenerator",
-        "projectPath": "C:\\Users\\ja\\Desktop\\Programowanie\\C#\\projekt 2 - face generator\\FaceGenerator\\FaceGenerator.csproj",
+        "projectPath": "C:\\Users\\ja\\Desktop\\Programowanie\\C#\\projekt 2 - face generator\\FaceGenerator\\FaceGenerator\\FaceGenerator.csproj",
         "packagesPath": "C:\\Users\\ja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ja\\Desktop\\Programowanie\\C#\\projekt 2 - face generator\\FaceGenerator\\obj\\",
+        "outputPath": "C:\\Users\\ja\\Desktop\\Programowanie\\C#\\projekt 2 - face generator\\FaceGenerator\\FaceGenerator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "c:\\program files\\dotnet\\sdk\\NuGetFallbackFolder"

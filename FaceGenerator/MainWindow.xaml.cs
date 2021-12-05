@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,13 +23,6 @@ namespace FaceGenerator
         public MainWindow()
         {
             InitializeComponent();
-            cmbColors.ItemsSource = typeof(Colors).GetProperties();
-        }
-
-        private void colorBtn_Click(object sender, RoutedEventArgs e)
-        {
-            Color selectedColor = (Color)(cmbColors.SelectedItem as PropertyInfo).GetValue(null, null);
-            faceEllipse.Fill = new SolidColorBrush(selectedColor);
         }
     }
 }
