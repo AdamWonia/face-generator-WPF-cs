@@ -5,8 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FaceGenerator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="600">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
 
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="Face Generator" FontSize="32" FontWeight="Bold" Grid.ColumnSpan="4" 
+                   HorizontalAlignment="Center" Padding="0, 10"/>
+
+        <Canvas x:Name="faceCanvas" Grid.Column="1" Grid.Row="2" Width="200" Height="250">
+            <Ellipse x:Name="faceEllipse" Fill="Beige"  Height="190" Width="190" StrokeThickness="2" Stroke="Black"
+                     Canvas.Left="5" Canvas.Top="5"/>
+        </Canvas>
+
+        <Button x:Name="colorBtn" Grid.Column="1" Grid.Row="3" Content="Change Color" FontSize="20" Click="colorBtn_Click" />
+
+        <ComboBox Name="cmbColors" Grid.Column="3" Grid.Row="2" Width="190" Height="20" Margin="80,20,80,200">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="{Binding Name}" Width="16" Height="16" Margin="0,2,5,2" />
+                        <TextBlock Text="{Binding Name}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
     </Grid>
 </Window>
