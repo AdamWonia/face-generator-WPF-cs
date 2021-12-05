@@ -41,9 +41,10 @@
             <Polygon x:Name="nosePolygon" Grid.Column="1" Grid.Row="2" Points="90,150 100,120 110,150" Fill="Brown" />
         </Canvas>
 
-        <Button x:Name="colorBtn" Grid.Column="1" Grid.Row="3" Content="Change Color" FontSize="20" Click="colorBtn_Click" />
+        <Button x:Name="colorBtn" Grid.Column="1" Grid.Row="3" Content="Random Face" FontSize="20" Click="colorBtn_Click" />
 
-        <ComboBox Name="cmbColors" Grid.Column="3" Grid.Row="2" Width="190" Height="20" Margin="80,20,80,200">
+        <TextBlock Grid.Column="2" Grid.Row="2" Text="Face color:" FontSize="20" FontWeight="Bold" Margin="5,20,0,200"/>
+        <ComboBox Name="cmbFaceColors" Grid.Column="3" Grid.Row="2" Width="190" Height="20" Margin="40,20,80,200">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -53,5 +54,18 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
+
+        <TextBlock Grid.Column="2" Grid.Row="2" Text="Eye color:" FontSize="20" FontWeight="Bold" Margin="5,80,0,20"/>
+        <ComboBox Name="cmbEyeColors" Grid.Column="3" Grid.Row="2" Width="190" Height="20" Margin="40,0,80,60">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="{Binding Name}" Width="16" Height="16" Margin="0,2,5,2" />
+                        <TextBlock Text="{Binding Name}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
     </Grid>
 </Window>

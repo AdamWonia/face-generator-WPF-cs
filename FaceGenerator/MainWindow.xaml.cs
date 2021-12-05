@@ -24,12 +24,13 @@ namespace FaceGenerator
         public MainWindow()
         {
             InitializeComponent();
-            cmbColors.ItemsSource = typeof(Colors).GetProperties();
+            cmbFaceColors.ItemsSource = typeof(Colors).GetProperties();
+            cmbEyeColors.ItemsSource = typeof(Colors).GetProperties();
         }
 
         private void colorBtn_Click(object sender, RoutedEventArgs e)
         {
-            Color selectedColor = (Color)(cmbColors.SelectedItem as PropertyInfo).GetValue(null, null);
+            Color selectedColor = (Color)(cmbFaceColors.SelectedItem as PropertyInfo).GetValue(null, null);
             faceEllipse.Fill = new SolidColorBrush(selectedColor);
         }
     }
