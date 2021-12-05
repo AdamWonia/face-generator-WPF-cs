@@ -38,6 +38,7 @@
                      Canvas.Left="130" Canvas.Top="90" Fill="Aqua" StrokeThickness="2" Stroke="Black"/>
             <Polygon x:Name="hatPolygon" Grid.Column="1" Grid.Row="2" Points="5,80 100,0 190,80" Fill="Blue" />
             <Polygon x:Name="mouthPolygon" Grid.Column="1" Grid.Row="2" Points="70,170 100,190 130,170" Fill="DarkMagenta" />
+            <Polygon x:Name="nosePolygon" Grid.Column="1" Grid.Row="2" Points="90,150 100,120 110,150" Fill="Brown" />
         </Canvas>
 
         <Button x:Name="colorBtn" Grid.Column="1" Grid.Row="3" Content="Change Color" FontSize="20" Click="colorBtn_Click" />
