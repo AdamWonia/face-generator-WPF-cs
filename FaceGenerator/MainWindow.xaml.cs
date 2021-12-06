@@ -26,6 +26,7 @@ namespace FaceGenerator
             InitializeComponent();
             cmbFaceColors.ItemsSource = typeof(Colors).GetProperties();
             cmbEyeColors.ItemsSource = typeof(Colors).GetProperties();
+            cmbHatColors.ItemsSource = typeof(Colors).GetProperties();
         }
 
         private void colorBtn_Click(object sender, RoutedEventArgs e)
@@ -34,6 +35,7 @@ namespace FaceGenerator
             faceEllipse.Fill = new SolidColorBrush(selectedColor);
             eyeEllipse1.Fill = new SolidColorBrush(selectedColor);
             eyeEllipse2.Fill = new SolidColorBrush(selectedColor);
+            hatPolygon.Fill = new SolidColorBrush(selectedColor);
         }
     }
 }

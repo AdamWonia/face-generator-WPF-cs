@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FaceGenerator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="600">
+        Title="Face Generator" Height="450" Width="600">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -66,6 +66,19 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
+
+        <TextBlock Grid.Column="2" Grid.Row="2" Text="Hat color:" FontSize="20" FontWeight="Bold" Margin="5,100,0,20"/>
+        <ComboBox Name="cmbHatColors" Grid.Column="3" Grid.Row="2" Width="190" Height="20" Margin="40,80,80,100">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="{Binding Name}" Width="16" Height="16" Margin="0,2,5,2" />
+                        <TextBlock Text="{Binding Name}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        
 
     </Grid>
 </Window>
