@@ -27,6 +27,8 @@ namespace FaceGenerator
             cmbFaceColors.ItemsSource = typeof(Colors).GetProperties();
             cmbEyeColors.ItemsSource = typeof(Colors).GetProperties();
             cmbHatColors.ItemsSource = typeof(Colors).GetProperties();
+            cmbNoseColors.ItemsSource = typeof(Colors).GetProperties();
+            cmbMouthColors.ItemsSource = typeof(Colors).GetProperties();
         }
 
         private void colorBtn_Click(object sender, RoutedEventArgs e)
