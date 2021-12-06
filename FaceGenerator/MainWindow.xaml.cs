@@ -33,11 +33,14 @@ namespace FaceGenerator
 
         private void colorBtn_Click(object sender, RoutedEventArgs e)
         {
-            Color selectedColor = (Color)(cmbFaceColors.SelectedItem as PropertyInfo).GetValue(null, null);
-            faceEllipse.Fill = new SolidColorBrush(selectedColor);
-            eyeEllipse1.Fill = new SolidColorBrush(selectedColor);
-            eyeEllipse2.Fill = new SolidColorBrush(selectedColor);
-            hatPolygon.Fill = new SolidColorBrush(selectedColor);
+            //Color selectedColor = (Color)(cmbFaceColors.SelectedItem as PropertyInfo).GetValue(null, null);
+            //faceEllipse.Fill = new SolidColorBrush(selectedColor);
+            //eyeEllipse1.Fill = new SolidColorBrush(selectedColor);
+            //eyeEllipse2.Fill = new SolidColorBrush(selectedColor);
+            //hatPolygon.Fill = new SolidColorBrush(selectedColor);
         }
+
+
+
     }
 }
