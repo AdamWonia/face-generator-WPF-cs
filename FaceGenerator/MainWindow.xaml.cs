@@ -25,22 +25,46 @@ namespace FaceGenerator
         {
             InitializeComponent();
             cmbFaceColors.ItemsSource = typeof(Colors).GetProperties();
-            cmbEyeColors.ItemsSource = typeof(Colors).GetProperties();
+            cmbEyesColors.ItemsSource = typeof(Colors).GetProperties();
             cmbHatColors.ItemsSource = typeof(Colors).GetProperties();
             cmbNoseColors.ItemsSource = typeof(Colors).GetProperties();
             cmbMouthColors.ItemsSource = typeof(Colors).GetProperties();
         }
 
-        private void colorBtn_Click(object sender, RoutedEventArgs e)
+        private void randomFaceBtn_Click(object sender, RoutedEventArgs e)
         {
-            //Color selectedColor = (Color)(cmbFaceColors.SelectedItem as PropertyInfo).GetValue(null, null);
-            //faceEllipse.Fill = new SolidColorBrush(selectedColor);
-            //eyeEllipse1.Fill = new SolidColorBrush(selectedColor);
-            //eyeEllipse2.Fill = new SolidColorBrush(selectedColor);
-            //hatPolygon.Fill = new SolidColorBrush(selectedColor);
+
         }
 
+        private void cmbFaceColors_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            Color selectedColor = (Color)(cmbFaceColors.SelectedItem as PropertyInfo).GetValue(null, null);
+            faceEllipse.Fill = new SolidColorBrush(selectedColor);
+        }
 
+        private void cmbEyesColors_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            Color selectedColor = (Color)(cmbEyesColors.SelectedItem as PropertyInfo).GetValue(null, null);
+            eyeEllipse1.Fill = new SolidColorBrush(selectedColor);
+            eyeEllipse2.Fill = new SolidColorBrush(selectedColor);
+        }
 
+        private void cmbHatColors_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            Color selectedColor = (Color)(cmbHatColors.SelectedItem as PropertyInfo).GetValue(null, null);
+            hatPolygon.Fill = new SolidColorBrush(selectedColor);
+        }
+
+        private void cmbNoseColors_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            Color selectedColor = (Color)(cmbNoseColors.SelectedItem as PropertyInfo).GetValue(null, null);
+            nosePolygon.Fill = new SolidColorBrush(selectedColor);
+        }
+
+        private void cmbMouthColors_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            Color selectedColor = (Color)(cmbMouthColors.SelectedItem as PropertyInfo).GetValue(null, null);
+            mouthPolygon.Fill = new SolidColorBrush(selectedColor);
+        }
     }
 }
