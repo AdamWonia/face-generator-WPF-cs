@@ -33,7 +33,9 @@ namespace FaceGenerator
 
         private void randomFaceBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            int amount = cmbFaceColors.Items.Count;
+            Random randomItem = new Random();
+            cmbFaceColors.SelectedIndex = randomItem.Next(0, amount + 1);
         }
 
         private void cmbFaceColors_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
