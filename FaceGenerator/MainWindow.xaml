@@ -29,7 +29,7 @@
         <TextBlock Grid.Column="1" Grid.Row="1" Text="Face Generator" FontSize="32" FontWeight="Bold" Grid.ColumnSpan="5" 
                    HorizontalAlignment="Center" Padding="0, 10"/>
 
-        <Canvas x:Name="faceCanvas" Grid.Column="1" Grid.Row="2" Width="200" Height="250">
+        <Canvas x:Name="faceCanvas" Grid.Column="1" Grid.Row="2" Width="200" Height="240">
             <Ellipse x:Name="faceEllipse" Fill="Beige"  Height="170" Width="160" StrokeThickness="2" Stroke="Black"
                      Canvas.Left="20" Canvas.Top="35"/>
             <Ellipse x:Name="eyeEllipse1" Grid.Column="1" Grid.Row="2" Width="30" Height="30"
@@ -103,6 +103,8 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
+
+        <Button x:Name="saveButton" Grid.Column="1" Grid.Row="3" Content="Save image" Width="150" FontSize="20" Click="saveButton_Click"/>
 
     </Grid>
 </Window>
