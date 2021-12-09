@@ -16,13 +16,18 @@ namespace FaceGenerator
         public MainWindow()
         {
             InitializeComponent();
+            // Inserting colours into combo boxes
             cmbFaceColors.ItemsSource = typeof(Colors).GetProperties();
             cmbEyesColors.ItemsSource = typeof(Colors).GetProperties();
             cmbHatColors.ItemsSource = typeof(Colors).GetProperties();
             cmbNoseColors.ItemsSource = typeof(Colors).GetProperties();
             cmbMouthColors.ItemsSource = typeof(Colors).GetProperties();
         }
-
+        /// <summary>
+        /// Saves the canvas to an image file in the selected directory.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
             RenderTargetBitmap renderTargetBitmap = new RenderTargetBitmap((int)faceCanvas.RenderSize.Width - 20,
@@ -45,7 +50,11 @@ namespace FaceGenerator
                 }
             }
         }
-
+        /// <summary>
+        /// Creates a random face using the Random class. Sets a random colour in each ComboBox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void randomFaceBtn_Click(object sender, RoutedEventArgs e)
         {
             Random randomItem = new Random();
@@ -60,27 +69,52 @@ namespace FaceGenerator
             cmbNoseColors.SelectedIndex = randomItem.Next(0, noseAmount + 1);
             cmbMouthColors.SelectedIndex = randomItem.Next(0, mouthAmount + 1);
         }
+        /// <summary>
+        /// Changes the colour of the face shape when selected.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbFaceColors_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             Color selectedColor = (Color)(cmbFaceColors.SelectedItem as PropertyInfo).GetValue(null, null);
             faceEllipse.Fill = new SolidColorBrush(selectedColor);
         }
+        /// <summary>
+        /// Changes the colour of the eyes when selected.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbEyesColors_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             Color selectedColor = (Color)(cmbEyesColors.SelectedItem as PropertyInfo).GetValue(null, null);
             eyeEllipse1.Fill = new SolidColorBrush(selectedColor);
             eyeEllipse2.Fill = new SolidColorBrush(selectedColor);
         }
+        /// <summary>
+        /// Changes the colour of the hat shape when selected.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbHatColors_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             Color selectedColor = (Color)(cmbHatColors.SelectedItem as PropertyInfo).GetValue(null, null);
             hatPolygon.Fill = new SolidColorBrush(selectedColor);
         }
+        /// <summary>
+        /// Changes the colour of the nose shape when selected.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbNoseColors_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             Color selectedColor = (Color)(cmbNoseColors.SelectedItem as PropertyInfo).GetValue(null, null);
             nosePolygon.Fill = new SolidColorBrush(selectedColor);
         }
+        /// <summary>
+        /// Changes the colour of the mouth shape when selected.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbMouthColors_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             Color selectedColor = (Color)(cmbMouthColors.SelectedItem as PropertyInfo).GetValue(null, null);
